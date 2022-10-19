@@ -1,32 +1,30 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'thi is title';
+  title = "thi is title";
+  show = false;
   toggled = true;
-  name='Santosh singh'
-  display=''
+  name = "Santosh singh";
+  display = "";
 
-
-  getEvent(val:any){
+  getEvent(val: any) {
     this.display = val;
-    console.log("eventNames",val)
+    console.log("eventNames", val);
   }
-  getName(name:string){
-  console.log("name",name)
+  getName(name: string) {
+    console.log("name", name);
     this.toggled = !this.toggled;
-  console.log("name after",this.toggled)
+    console.log("name after", this.toggled);
 
-    if(this.toggled){
-       this.name ='if';
+    if (this.toggled) {
+      this.name = "if";
+    } else {
+      this.name = "else";
     }
-    else{
-       this.name='else';
-    }
-   
   }
 }
