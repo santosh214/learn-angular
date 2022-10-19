@@ -3,12 +3,14 @@
     <p>else</p>
 </ng-template>
 
-<p *ngIf="show2=='abcd'; then two else three ">hello2</p>
+<button (click)="getEvent()">click</button>
+<p *ngIf="show2==true; then two else three ">hello2</p>
+<p *ngFor="let item of names">{{item}} </p>
 <ng-template #two>
-    <p>two</p>
+    <button>approve</button>
 </ng-template>
 <ng-template #three>
-    <p>three</p>
+    <button>submit</button>
 </ng-template>
 <app-login></app-login>
 <router-outlet></router-outlet>

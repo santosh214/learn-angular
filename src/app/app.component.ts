@@ -8,14 +8,14 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "thi is title";
   show = false;
-  show2 = "abc";
+  show2 = true;
   toggled = true;
   name = "Santosh singh";
   display = "";
+  names=['scroll', 'scrollTo', 'scrollToNext', 'scrollTo']
 
-  getEvent(val: any) {
-    this.display = val;
-    console.log("eventNames", val);
+  getEvent() {
+this.show2 = !this.show2;
   }
   getName(name: string) {
     console.log("name", name);
