@@ -4,11 +4,13 @@ import {UserAuthModule} from './user-auth/user-auth.module'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

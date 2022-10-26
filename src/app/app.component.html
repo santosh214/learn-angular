@@ -1,16 +1,31 @@
-<p *ngIf="show else el">hello</p>
+<app-header>
+    
+</app-header>
+
+<!-- <p *ngIf="show; else el">hello</p>
 <ng-template #el>
-    <p>else</p>
+  <p>else</p>
 </ng-template>
 
 <button (click)="getEvent()">click</button>
-<p *ngIf="show2==true; then two else three ">hello2</p>
+<p *ngIf="show2 == true; then two; else three">hello212345678</p>
+
 <p *ngFor="let item of names">{{item}} </p>
 <ng-template #two>
-    <button>approve</button>
+  <button>approve</button>
 </ng-template>
 <ng-template #three>
-    <button>submit</button>
+  <button>submit</button>
 </ng-template>
+
+<input type="text" #color (keyup)="getColor(color.value)" />
+<button (click)="setColor(color.value)">change color</button>
+<p>hello</p>
+<div [ngSwitch]="color1">
+  <h1 *ngSwitchCase="'red'" style="color: red">Red</h1>
+  <h1 *ngSwitchCase="'green'" style="color: green">green</h1>
+  <h1 *ngSwitchCase="'blue'" style="color: blue">blue</h1>
+  <h1 *ngSwitchDefault style="color: black">default</h1>
+</div>
 <app-login></app-login>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->

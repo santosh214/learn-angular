@@ -7,15 +7,27 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "thi is title";
-  show = false;
+  color1='green'
+  show = true;
   show2 = true;
   toggled = true;
   name = "Santosh singh";
   display = "";
-  names=['scroll', 'scrollTo', 'scrollToNext', 'scrollTo']
-
+  names = ["scroll", "scrollTo", "scrollToNext", "scrollTo"];
+  
+  color = "green";
   getEvent() {
-this.show2 = !this.show2;
+    this.show2 = !this.show2;
+  }
+  getColor(val:string) {
+    this.color1=val.toLowerCase();
+    console.log("color: " + this.color1);
+  }
+  setColor(val:string) {
+
+    this.color1 = val;
+    console.log("color11: " + this.color1);
+  
   }
   getName(name: string) {
     console.log("name", name);
