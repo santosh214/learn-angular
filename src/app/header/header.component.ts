@@ -11,5 +11,17 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  name:string=''
+  email:string=''
+  password:any=''
+  userData:any={}
+
+  getData(data:any){
+    console.log("checking",data)
+    this.name = data.name
+    this.email = data.email
+    this.password = data.password
+    this.userData =data
+  }
 
 }
