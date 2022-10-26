@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import  {FormsModule} from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     HeaderComponent,
-    TodoComponent
+    TodoComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

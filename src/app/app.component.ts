@@ -14,6 +14,7 @@ export class AppComponent {
   name = "Santosh singh";
   display = "";
   names = ["scroll", "scrollTo", "scrollToNext", "scrollTo"];
+  dd=0;
   
   color = "green";
   getEvent() {
@@ -39,5 +40,8 @@ export class AppComponent {
     } else {
       this.name = "else";
     }
+  }
+  changeValue(){
+    this.dd= Math.random();
   }
 }
