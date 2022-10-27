@@ -15,6 +15,10 @@ export class AppComponent {
   display = "";
   names = ["scroll", "scrollTo", "scrollToNext", "scrollTo"];
   dd = 0;
+  way2:any=''
+  pipe='Pipes in angular uppercase '
+  pipe2='Pipes in angular lowercase '
+  pipe3Date=Date()
   userDetails = [
     {
 
@@ -38,6 +42,10 @@ export class AppComponent {
   color = "green";
   getEvent() {
     this.show2 = !this.show2;
+  }
+
+  getTemplateReference(val:HTMLInputElement){
+    console.warn("template reference",val)
   }
   getColor(val: string) {
     this.color1 = val.toLowerCase();

@@ -7,9 +7,42 @@
 <!-- <app-child [xyz]="dd"></app-child>
 <button (click)="changeValue()" > change value</button> -->
 <!-- send data to child component end -->
-<ul *ngFor="let user of userDetails">
+
+<!-- reuseable component  start -->
+<!-- <ul *ngFor="let user of userDetails">
   <app-user-detail [item]="user" ></app-user-detail>
-</ul>
+</ul> -->
+<!-- reuseable component  end -->
+
+<!-- two way binding  start -->
+<!-- 
+<h1>Two way binding </h1>
+<input type="text" placeholder="enter your name" [(ngModel)]="way2" >
+{{way2}} -->
+<!-- two way binding  end -->
+
+<!-- template reference variable start -->
+<!-- <h1>template reference variable</h1>
+<input type="text" #box placeholder="enter ur name" />
+
+<button (click)="getTemplateReference(box)" >call function</button> -->
+<!-- template reference variable end -->
+
+<!-- pipes in angular start -->
+<h1>Pipes</h1>
+{{pipe |uppercase}}
+<br/>
+{{pipe2 |lowercase}}
+<br/>
+Date
+{{pipe3Date}}
+<br/>
+
+Date by pipe
+{{pipe3Date|date}}
+<!-- pipes in angular end -->
+
+
 
 <!-- <p *ngIf="show; else el">hello</p>
 <ng-template #el>
