@@ -4,6 +4,9 @@
 <br />
 <a routerLink="/child">child</a>
 <button (click)="createTask(task.value)">Add task</button>
+<ul *ngFor="let it of pp.products">
+    <li>{{it.title}} </li>
+</ul>
 <ul *ngFor="let item of list">
     <li>{{item.name}}  <button (click)="removeTask(item.id)">Remove</button> </li>
     <li><a routerLink='/user/{{ item.id}}'>{{item.name}}</a></li>

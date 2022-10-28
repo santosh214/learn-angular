@@ -1,11 +1,19 @@
 import { Component } from "@angular/core";
-
+import { ProductsService } from "./services/products.service";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
+  products:any;
+
+  constructor(private productData: ProductsService) {
+    productData.users().subscribe((data)=>{
+      console.log("daa",data)
+      this.products=data});
+    console.log("thihsishis",this.products)
+  }
   title = "thi is title";
   color1 = "green";
   show = true;
@@ -15,13 +23,12 @@ export class AppComponent {
   display = "";
   names = ["scroll", "scrollTo", "scrollToNext", "scrollTo"];
   dd = 0;
-  way2:any=''
-  pipe='Pipes in angular uppercase '
-  pipe2='Pipes in angular lowercase '
-  pipe3Date=Date()
+  way2: any = "";
+  pipe = "Pipes in angular uppercase ";
+  pipe2 = "Pipes in angular lowercase ";
+  pipe3Date = Date();
   userDetails = [
     {
-
       name: "Santosh",
       email: "Santosh@gmail.com",
     },
@@ -44,8 +51,8 @@ export class AppComponent {
     this.show2 = !this.show2;
   }
 
-  getTemplateReference(val:HTMLInputElement){
-    console.warn("template reference",val)
+  getTemplateReference(val: HTMLInputElement) {
+    console.warn("template reference", val);
   }
   getColor(val: string) {
     this.color1 = val.toLowerCase();

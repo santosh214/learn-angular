@@ -73,4 +73,7 @@ slice <br/>
 </div>
 <app-login></app-login>
 -->
+<ul *ngFor="let items of products.products">
+  <li>{{items.title}} </li>
+</ul>
 <router-outlet></router-outlet> 

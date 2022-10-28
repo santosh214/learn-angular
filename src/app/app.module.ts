@@ -10,6 +10,7 @@ import  {FormsModule} from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
 import { ChildComponent } from './child/child.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import  {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AppRoutingModule,
     UserAuthModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
