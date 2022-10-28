@@ -7,6 +7,9 @@ export class ProductsService {
 
   constructor(private http:HttpClient) { }
   users(){
-    return this.http.get('https://dummyjson.com/products')
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
-}
+  saveUser(data:any){
+    return this.http.post('https://jsonplaceholder.typicode.com/posts',data)
+  }
+  }
