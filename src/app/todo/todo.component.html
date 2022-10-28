@@ -2,7 +2,9 @@
 <input type="text" name="task" placeholder="enter new task" #task />
 <br />
 <br />
+<a routerLink="/child">child</a>
 <button (click)="createTask(task.value)">Add task</button>
 <ul *ngFor="let item of list">
-    <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button> </li>
+    <li>{{item.name}}  <button (click)="removeTask(item.id)">Remove</button> </li>
+    <li><a routerLink='/user/{{ item.id}}'>{{item.name}}</a></li>
 </ul>
