@@ -73,7 +73,22 @@ slice <br/>
 </div>
 <app-login></app-login>
 -->
-<ul *ngFor="let items of products.products">
+
+
+<!-- service start  -->
+<!-- <ul *ngFor="let items of products.products">
   <li>{{items.title}} </li>
-</ul>
+</ul> -->
+<!-- service end  -->
+
+<!-- post method in angular start -->
+<form #usersForm="ngForm" (ngSubmit)="addNewUser(usersForm.value)">
+
+  <input type="text" ngModel name="title">
+  <input type="text" ngModel name="body">
+  <input type="number" ngModel name="id">
+  <button>add user</button>
+</form>
+<!-- post method in angular end -->
+
 <router-outlet></router-outlet> 
